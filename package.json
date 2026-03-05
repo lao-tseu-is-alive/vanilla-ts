@@ -16,6 +16,6 @@
     "typescript": "^5"
   },
   "bun-create": {
-    "postinstall": "echo '\\n🐰 All set! Run these commands:\\n\\n  bun run dev     → start dev server\\n  bun test        → run tests\\n  bun test --watch → tests in watch mode\\n'"
+    "postinstall": "bun -e \"console.log('\\n🐰 All set! Run these commands:\\n\\n  bun run dev     → start dev server\\n  bun test        → run tests\\n  bun test --watch → tests in watch mode\\n')\""
   }
 }

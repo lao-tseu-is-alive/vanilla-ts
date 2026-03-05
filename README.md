@@ -9,7 +9,7 @@ A minimal, batteries-included TypeScript starter powered by [Bun](https://bun.sh
 Use this template directly:
 
 ```bash
-bun create <your-github-user>/vanilla-ts my-app
+bun create lao-tseu-is-alive/vanilla-ts my-app
 cd my-app
 bun run dev
 ```
@@ -17,7 +17,7 @@ bun run dev
 Or clone and install manually:
 
 ```bash
-git clone https://github.com/<your-github-user>/vanilla-ts.git
+git clone https://github.com/lao-tseu-is-alive/vanilla-ts.git
 cd vanilla-ts
 bun install
 bun run dev

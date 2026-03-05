@@ -1,0 +1,19 @@
+{
+  "name": "vanilla-ts",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "bun index.html",
+    "test": "bun test",
+    "test:watch": "bun test --watch"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "bun-create": {
+    "postinstall": "echo '\\n🐰 All set! Run these commands:\\n\\n  bun run dev     → start dev server\\n  bun test        → run tests\\n  bun test --watch → tests in watch mode\\n'"
+  }
+}

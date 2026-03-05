@@ -25,11 +25,14 @@ bun run dev
 
 ## Scripts
 
-| Command            | Description                    |
-| ------------------ | ------------------------------ |
-| `bun run dev`      | Start dev server with HMR      |
-| `bun test`         | Run the test suite              |
-| `bun test --watch` | Run tests in watch mode         |
+| Command                | Description                                        |
+| ---------------------- | -------------------------------------------------- |
+| `bun run dev`          | Start dev server with HMR                          |
+| `bun test`             | Run the test suite                                 |
+| `bun test --watch`     | Run tests in watch mode                            |
+| `bun run build`        | Build standard static site (HTML/JS/CSS separated) |
+| `bun run build:inline` | Build single-file portable app (everything inlined)|
+
 
 ## Project Structure
 
@@ -53,6 +56,37 @@ bun run dev
 - **Dev Server with HMR** — `bun index.html` gives you a full dev server out of the box
 - **Built-in Test Runner** — Jest-compatible `bun test` with `describe`, `test`, `expect`, and more
 - **Modern CSS** — Dark theme with gradients and micro-animations
+
+## 🏗 Building for Production
+
+This template exploits Bun's native HTML bundler to offer two distinct compilation strategies out of the box — zero config, zero plugins.
+
+### 1. Standard Web Build
+```bash
+bun run build
+
+```
+
+*(Under the hood: `bun build ./index.html --outdir=dist --minify`)*
+
+* **Output:** Generates a standard static site distribution (`index.html` + hashed `.js` and `.css` files).
+* **Use case:** Traditional deployments (Vercel, Netlify, GitHub Pages, Nginx). The separation ensures optimal browser caching for individual assets.
+
+### 2. Single-File Portable App (Inlined)
+
+```bash
+bun run build:inline
+
+```
+
+*(Under the hood: `bun build --compile ./index.html --outdir=dist --minify`)*
+
+* **Output:** Generates a **single, standalone `index.html**` file. All TypeScript/JavaScript and CSS are compiled, minified, and injected directly into the HTML payload.
+* **Use case:** Micro-apps, portable offline tools, HTML email attachments, or WebViews. Distribute a fully functional app as one single file with zero external network requests.
+
+
+
+
 
 ## Bun Test Runner
 

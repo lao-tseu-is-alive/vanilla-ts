@@ -1,11 +1,13 @@
 {
   "name": "vanilla-ts",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "type": "module",
   "scripts": {
     "dev": "bun index.html",
     "test": "bun test",
-    "test:watch": "bun test --watch"
+    "test:watch": "bun test --watch",
+    "build": "bun build ./index.html --outdir=dist --minify",
+    "build:inline": "bun build --compile ./index.html --outdir=dist --minify"
   },
   "devDependencies": {
     "@types/bun": "latest"
